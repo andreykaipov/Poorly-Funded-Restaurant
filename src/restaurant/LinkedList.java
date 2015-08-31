@@ -261,10 +261,10 @@ public class LinkedList {
       public void makeReservation(Reservation res) {
          if(isEmpty()) addAfter(res);
          else if(find(res))
-            System.err.println("Unable to add. Duplicate reservation found!");
-//         else if(timeExists(res.getIntegerTime()))
-//            System.err.println("Unable to add. "
-//                    + "A reservation already exists at " + res.getTime() + "!");
+            System.err.println("Unable to add.\nDuplicate reservation found!");
+         else if(timeExists(res.getIntegerTime()))
+            System.err.println("Unable to add.\n"
+                    + "A reservation already exists at " + res.getTime() + "!");
          else {
             position = null;
             nextIndex = 0;
@@ -295,13 +295,16 @@ public class LinkedList {
        * If the old reservation is not found, the second reservation is NOT added.
        * @param res1 the reservation that is to be replaced.
        * @param res2 the reservation that does the replacing.
+       * @return true if successful replacement. false is not found (and therefore replaced).
        */
-      public void replaceReservation(Reservation res1, Reservation res2) {
+      public boolean replaceReservation(Reservation res1, Reservation res2) {
          if(find(res1)) {
             remove();
             makeReservation(res2);
+            return true;
          }
-         else System.err.println("The old reservation was NOT found.");
+         else //System.err.println("The old reservation was NOT found.");
+             return false;
       }
    }
 }
