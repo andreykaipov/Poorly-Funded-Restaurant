@@ -1,6 +1,8 @@
 # Poorly-Funded-Restaurant
 This program is a simulation of a poorly funded restaurant written in Java.
 
+To check out this program, just run `Restaurant.jar` from the `dist` folder.
+
 Our poorly funded restaurant has only one table that can be reserved every 15 minutes, and a special table that is exclusively for those who "walk-in" without a reservation.
 
 Reservations are modeled in the form of a linked list, so that we can easily insert a reservation into a sorted list. 
