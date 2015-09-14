@@ -8,4 +8,4 @@ Similarly, walk-ins are modeled in the form of a linked queue, so that our walk-
 
 This program utilizes NetBeans' Swing GUI builder, so there is a lot of generated bulky code in the main class.
 
-This was my Programming II (COP 3337) final project, and it got a few good laughs when I presented it to the class. Even though it was a final project, I'd like to polish it up so I can reintroduce myself to Java.
+This was my Programming II (COP 3337) final project, and it got a few good laughs when I presented it to the class.
